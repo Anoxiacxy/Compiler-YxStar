@@ -1,0 +1,26 @@
+// factorial with 
+int printf(char *);
+char getchar();
+
+int read_int() // positive
+{
+	int x = 0;
+   char c = getchar();
+	while (c<'0'||c>'9') c=getchar();
+	while (c>='0'&&c<='9') {
+      x = x * 10 + c - '0';
+      c = getchar();
+   }
+	return x;
+}
+
+int fact(int a)
+{
+   if( a<2 ) return 1;
+   return a*fact(a-1);
+}
+int main()
+{
+   int a = read_int();
+   printf( "%d!=%d\n", a, fact(a) );
+}

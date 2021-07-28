@@ -1,0 +1,4 @@
+void puts(char *);
+int main() {
+    puts("Hello, World!\n");
+}
